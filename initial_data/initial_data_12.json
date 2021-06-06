@@ -1,0 +1,12 @@
+  {
+    "code":"m3",
+    "name":"Boom lift 80",
+    "type":"meter",
+    "availability":false,
+    "needing_repair":true,
+    "durability":500,
+    "max_durability":12000,
+    "mileage":200,
+    "price": 2000,
+    "minimum_rent_period":2
+  }

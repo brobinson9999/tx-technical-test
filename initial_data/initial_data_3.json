@@ -1,0 +1,12 @@
+  {
+    "code":"p3",
+    "name":"Dia Blade 14 inch",
+    "type":"plain",
+    "availability":true,
+    "needing_repair":false,
+    "durability":40000,
+    "max_durability":50000,
+    "mileage":null,
+    "price": 3000,
+    "minimum_rent_period":2
+  }

@@ -1,0 +1,12 @@
+  {
+    "code":"p6",
+    "name":"Copper Blade 8 inch",
+    "type":"plain",
+    "availability":true,
+    "needing_repair":false,
+    "durability":1500,
+    "max_durability":2000,
+    "mileage":null,
+    "price": 300,
+    "minimum_rent_period":2
+  }

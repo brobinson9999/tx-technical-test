@@ -1,0 +1,12 @@
+  {
+    "code":"m4",
+    "name":"Boom lift 100",
+    "type":"meter",
+    "availability":true,
+    "needing_repair":false,
+    "durability":4000,
+    "max_durability":12000,
+    "mileage":8500,
+    "price": 2500,
+    "minimum_rent_period":2
+  }

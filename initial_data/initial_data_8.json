@@ -1,0 +1,12 @@
+  {
+    "code":"p8",
+    "name":"Beam Clamp",
+    "type":"plain",
+    "availability":true,
+    "needing_repair":false,
+    "durability":10000,
+    "max_durability":20000,
+    "mileage":null,
+    "price": 800,
+    "minimum_rent_period":30
+  }

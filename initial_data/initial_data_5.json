@@ -1,0 +1,12 @@
+  {
+    "code":"p5",
+    "name":"Copper Blade 5 inch",
+    "type":"plain",
+    "availability":false,
+    "needing_repair":true,
+    "durability":0,
+    "max_durability":2000,
+    "mileage":null,
+    "price": 200,
+    "minimum_rent_period":2
+  }

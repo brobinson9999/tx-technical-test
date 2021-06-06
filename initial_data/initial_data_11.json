@@ -1,0 +1,12 @@
+  {
+    "code":"m2",
+    "name":"Boom lift 60",
+    "type":"meter",
+    "availability":true,
+    "needing_repair":false,
+    "durability":8000,
+    "max_durability":10000,
+    "mileage":5000,
+    "price": 1500,
+    "minimum_rent_period":4
+  }

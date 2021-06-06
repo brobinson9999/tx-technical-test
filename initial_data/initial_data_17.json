@@ -1,0 +1,12 @@
+  {
+    "code":"m8",
+    "name":"Boom lift 40",
+    "type":"meter",
+    "availability":true,
+    "needing_repair":false,
+    "durability":8000,
+    "max_durability":10000,
+    "mileage":2500,
+    "price": 1000,
+    "minimum_rent_period":2
+  }

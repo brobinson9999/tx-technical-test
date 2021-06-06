@@ -1,0 +1,12 @@
+  {
+    "code":"p2",
+    "name":"Air Compressor 5 Electric",
+    "type":"plain",
+    "availability":true,
+    "needing_repair":false,
+    "durability":1500,
+    "max_durability":2000,
+    "mileage":null,
+    "price": 6500,
+    "minimum_rent_period":1
+  }
