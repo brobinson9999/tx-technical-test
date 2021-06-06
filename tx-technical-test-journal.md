@@ -72,3 +72,10 @@ mkdir -p ./frontend/src/components
 mkdir -p ./frontend/static/frontend
 mkdir -p ./frontend/templates/frontend
 git add .;git commit -m"django-admin startapp frontend"
+
+cd ./frontend && npm init -y
+npm i webpack webpack-cli --save-dev
+git add .;git commit -m"npm i webpack webpack-cli --save-dev"
+
+# Add dev and build scripts to package.json.
+git add .;git commit -m"Add dev and build scripts to package.json."
