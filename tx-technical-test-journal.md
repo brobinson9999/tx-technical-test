@@ -103,3 +103,16 @@ git add .;git commit -m"Add the frontend app to django_react/settings.py"
 
 # Add products model.
 git add .;git commit -m"Add products model and initial API."
+
+python manage.py makemigrations products
+git add .;git commit -m"python manage.py makemigrations products"
+
+python manage.py migrate
+git add db.sqlite3;git commit -m"python manage.py migrate"
+
+# Exclude pycache files from git.
+echo "__pycache__/" >> .gitignore
+git add .;git commit -m"echo \"__pycache__/\" >> .gitignore"
+
+# Add empty React.JS frontend.
+git add .;git commit -m"Add empty React.JS frontend."
