@@ -51,3 +51,5 @@ The ListView should be searchable, sortable, and "filterable". The wireframe doe
 The absolute simplest way to do this would be to set up a Django JSON REST API service that accepts anything, and serves up a React app as a front end that uses that API as a back end, which enforces most application logic.
 
 This has a number of downsides and I'd greatly prefer having most of the logic happen server-side. On the other hand, it is the truly "minimal" viable product. So the best strategy may be to implement this simplest possible thing, then iterate to a model where the API is responsible for more of the application logic. I think most of the time I would just skip this step and go straight to the version that has most of the logic server-side. If you know that you will end up there, one could consider it a waste to bother building the version where the logic is in the UI.
+
+I want to be able to try some things out as I go, so my next step will be the build the basic Django and React apps.
