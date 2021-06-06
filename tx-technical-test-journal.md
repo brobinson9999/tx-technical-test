@@ -60,3 +60,6 @@ git add .;git commit -m"python3 -m venv venv"
 
 pip install django djangorestframework
 git add .;git commit -m"pip install django djangorestframework"
+
+django-admin startproject tx_technical_test .
+git add .;git commit -m"django-admin startproject tx_technical_test ."
