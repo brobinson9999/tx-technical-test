@@ -57,3 +57,6 @@ I want to be able to try some things out as I go, so my next step will be the bu
 python3 -m venv venv
 source venv/bin/activate
 git add .;git commit -m"python3 -m venv venv"
+
+pip install django djangorestframework
+git add .;git commit -m"pip install django djangorestframework"
