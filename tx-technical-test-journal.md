@@ -116,3 +116,17 @@ git add .;git commit -m"echo \"__pycache__/\" >> .gitignore"
 
 # Add empty React.JS frontend.
 git add .;git commit -m"Add empty React.JS frontend."
+
+# Add stub for product frontend.
+git add .;git commit -m"Add stub for product frontend."
+
+npm run dev
+git add .;git commit -m"npm run dev"
+
+
+# As I went to import some data to test the progress so far, I noticed that the original model definition doesn't allow mileage to be nullable.
+# Updated the model for products, then:
+python manage.py makemigrations products
+python manage.py migrate
+git add .;git commit -m"Make products.mileage nullable."
+

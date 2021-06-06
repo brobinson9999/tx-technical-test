@@ -16,14 +16,14 @@ class Product(models.Model):
     # }
 
     # For the first version, I'll just copy the example input data:
-    code = models.CharField(max_length=255)
-    name = models.CharField(max_length=255),
-    type = models.CharField(max_length=255), # Could probably be shorter
-    availability = models.BooleanField()
-    needing_repair = models.BooleanField()
+    code = models.CharField(max_length=255,default="")
+    name = models.CharField(max_length=255,default="")
+    type = models.CharField(max_length=255,default="plain") # Could probably be shorter
+    availability = models.BooleanField(default=True)
+    needing_repair = models.BooleanField(default=False)
     durability = models.IntegerField()
     max_durability = models.IntegerField()
-    mileage = models.IntegerField() # Used IntegerField here because all the sample data was in integers; it could easily be a float or decimal field
+    mileage = models.IntegerField(null=True) # Used IntegerField here because all the sample data was in integers; it could easily be a float or decimal field
     price = models.IntegerField() # Used IntegerField here because all the sample data was in integers; it could easily be a float or decimal field
     minimum_rent_period = models.IntegerField() # In days
 
