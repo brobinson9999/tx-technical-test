@@ -130,3 +130,12 @@ python manage.py makemigrations products
 python manage.py migrate
 git add .;git commit -m"Make products.mileage nullable."
 
+
+I have enough of the app built to import the initial data now, and take a look at it in the React frontend. I'll tackle the initial data load first, then focus on building out the UI.
+
+
+# 2021-06-06 11:00
+
+The most convenient thing would be if I could simply POST this JSON file to the API in order to create records.
+
+I did a little testing and found that it works when you submit dictionaries, but does not support an array of dictionaries.
