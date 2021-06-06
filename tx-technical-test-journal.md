@@ -79,3 +79,6 @@ git add .;git commit -m"npm i webpack webpack-cli --save-dev"
 
 # Add dev and build scripts to package.json.
 git add .;git commit -m"Add dev and build scripts to package.json."
+
+npm i @babel/core babel-loader @babel/preset-env @babel/preset-react --save-dev
+git add .;git commit -m"npm i @babel/core babel-loader @babel/preset-env @babel/preset-react --save-dev"
