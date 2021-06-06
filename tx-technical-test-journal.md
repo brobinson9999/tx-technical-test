@@ -53,3 +53,7 @@ The absolute simplest way to do this would be to set up a Django JSON REST API s
 This has a number of downsides and I'd greatly prefer having most of the logic happen server-side. On the other hand, it is the truly "minimal" viable product. So the best strategy may be to implement this simplest possible thing, then iterate to a model where the API is responsible for more of the application logic. I think most of the time I would just skip this step and go straight to the version that has most of the logic server-side. If you know that you will end up there, one could consider it a waste to bother building the version where the logic is in the UI.
 
 I want to be able to try some things out as I go, so my next step will be the build the basic Django and React apps.
+
+python3 -m venv venv
+source venv/bin/activate
+git add .;git commit -m"python3 -m venv venv"
