@@ -14,14 +14,24 @@ import ReturnConfirmationDialog from "./ReturnConfirmationDialog";
 class ProductIndex extends Component {
   constructor(props) {
     super(props);
+	this.state = {
+		search_query: ""
+	};
+	
+	this.handleChange = this.handleChange.bind(this);	
+  }
+
+  handleChange(event)
+  {
+    this.setState({search_query: event.target.value});
   }
 
   render() {
     return (
 	  <div>
-	    <SearchBar />
+	    <SearchBar value={this.state.search_query} onChange={this.handleChange} />
 
-		<SortableListView items={this.props.products} />
+		<SortableListView items={this.props.products.filter(product => product.name.includes(this.state.search_query))} />
 
 		<BookButton />
 		<BookDialog />
