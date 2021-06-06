@@ -85,3 +85,6 @@ git add .;git commit -m"npm i @babel/core babel-loader @babel/preset-env @babel/
 
 npm i react react-dom --save-dev
 git add .;git commit -m"npm i react react-dom --save-dev"
+
+# Configure .babelrc and webpack.config.js.
+git add .;git commit -m"Configure .babelrc and webpack.config.js."
