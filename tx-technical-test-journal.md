@@ -88,3 +88,8 @@ git add .;git commit -m"npm i react react-dom --save-dev"
 
 # Configure .babelrc and webpack.config.js.
 git add .;git commit -m"Configure .babelrc and webpack.config.js."
+
+
+# 2021-06-06
+
+Now that I have the skeleton of the Django app and React frontend built, I will add the model and initial API for the "products" table.
