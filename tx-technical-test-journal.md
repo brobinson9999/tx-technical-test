@@ -63,3 +63,7 @@ git add .;git commit -m"pip install django djangorestframework"
 
 django-admin startproject tx_technical_test .
 git add .;git commit -m"django-admin startproject tx_technical_test ."
+
+# Enable rest_framework in settings.py.
+git add .;git commit -m"Enable rest_framework in settings.py."
+
