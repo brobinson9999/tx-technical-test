@@ -67,3 +67,8 @@ git add .;git commit -m"django-admin startproject tx_technical_test ."
 # Enable rest_framework in settings.py.
 git add .;git commit -m"Enable rest_framework in settings.py."
 
+django-admin startapp frontend
+mkdir -p ./frontend/src/components
+mkdir -p ./frontend/static/frontend
+mkdir -p ./frontend/templates/frontend
+git add .;git commit -m"django-admin startapp frontend"
