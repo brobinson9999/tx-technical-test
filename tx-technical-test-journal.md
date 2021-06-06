@@ -100,3 +100,6 @@ git add .;git commit -m"django-admin startapp products"
 
 # Add the frontend app to django_react/settings.py
 git add .;git commit -m"Add the frontend app to django_react/settings.py"
+
+# Add products model.
+git add .;git commit -m"Add products model and initial API."
