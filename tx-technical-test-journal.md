@@ -93,3 +93,10 @@ git add .;git commit -m"Configure .babelrc and webpack.config.js."
 # 2021-06-06
 
 Now that I have the skeleton of the Django app and React frontend built, I will add the model and initial API for the "products" table.
+
+django-admin startapp products
+# Add the new app to django_react/settings.py
+git add .;git commit -m"django-admin startapp products"
+
+# Add the frontend app to django_react/settings.py
+git add .;git commit -m"Add the frontend app to django_react/settings.py"
