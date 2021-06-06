@@ -7,8 +7,18 @@ class ReturnConfirmationDialog extends Component {
   }
 
   render() {
+	if (this.props.visible == false)
+		return null;
+
     return (
-      <div />
+      <div>
+		Your total price is ${this.props.price}.
+		<br />
+		Do you want to proceed?
+	  
+		<input type="button" value="Cancel" />
+		<input type="button" value="Confirm" />
+	  </div>
     );
   }
 }

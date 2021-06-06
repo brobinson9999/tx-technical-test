@@ -4,11 +4,7 @@ import { render } from "react-dom";
 import SearchBar from "./SearchBar";
 import SortableListView from "./SortableListView";
 import BookButton from "./BookButton";
-import BookDialog from "./BookDialog";
-import BookConfirmationDialog from "./BookConfirmationDialog";
 import ReturnButton from "./ReturnButton";
-import ReturnDialog from "./ReturnDialog";
-import ReturnConfirmationDialog from "./ReturnConfirmationDialog";
 
 
 class ProductIndex extends Component {
@@ -27,19 +23,16 @@ class ProductIndex extends Component {
   }
 
   render() {
+	var products = this.props.products.filter(product => product.name.includes(this.state.search_query));
+	
     return (
 	  <div>
 	    <SearchBar value={this.state.search_query} onChange={this.handleChange} />
 
-		<SortableListView items={this.props.products.filter(product => product.name.includes(this.state.search_query))} />
+		<SortableListView items={products} />
 
-		<BookButton />
-		<BookDialog />
-		<BookConfirmationDialog />
-		
-		<ReturnButton />
-		<ReturnDialog />
-		<ReturnConfirmationDialog />
+		<BookButton products={products} />
+		<ReturnButton products={products} />
 	  </div>
     );
   }

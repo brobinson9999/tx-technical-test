@@ -7,8 +7,18 @@ class BookConfirmationDialog extends Component {
   }
 
   render() {
+	if (this.props.visible == false)
+		return null;
+
     return (
-      <div />
+      <div>
+		Your estimated price is ${this.props.estimated_price}.
+		<br />
+		Do you want to proceed?
+	  
+		<input type="button" value="Cancel" />
+		<input type="button" value="Confirm" />
+	  </div>
     );
   }
 }
