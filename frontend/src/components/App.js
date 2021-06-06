@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { render } from "react-dom";
+import ProductIndex from "./ProductIndex";
 
 class App extends Component {
   constructor(props) {
@@ -33,18 +34,11 @@ class App extends Component {
 
   render() {
     return (
-      <ul>
-        {this.state.data.map(product => {
-          return (
-            <li key={product.id}>
-              {product.name} - {product.price}
-            </li>
-          );
-        })}
-      </ul>
+	  <ProductIndex products={this.state.data} />      
     );
   }
 }
+
 
 export default App;
 
