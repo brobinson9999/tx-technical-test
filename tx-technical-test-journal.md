@@ -139,3 +139,10 @@ I have enough of the app built to import the initial data now, and take a look a
 The most convenient thing would be if I could simply POST this JSON file to the API in order to create records.
 
 I did a little testing and found that it works when you submit dictionaries, but does not support an array of dictionaries.
+
+
+# 2021-06-07 08:30
+
+I haven't been updating the journal, but I have figured out some more. To do the initial load, I simply split the JSON array using a text editor and individually POSTed the elements to the server's Create action. A scripted solution that loads the whole file would probably be better if we were doing this multiple times or for a very large input list.
+
+I also built out the UI and most of the logic, in the UI itself. I am now moving things to the API side.
