@@ -146,3 +146,37 @@ I did a little testing and found that it works when you submit dictionaries, but
 I haven't been updating the journal, but I have figured out some more. To do the initial load, I simply split the JSON array using a text editor and individually POSTed the elements to the server's Create action. A scripted solution that loads the whole file would probably be better if we were doing this multiple times or for a very large input list.
 
 I also built out the UI and most of the logic, in the UI itself. I am now moving things to the API side.
+
+
+# 2021-06-07 09:45
+
+I've finished connecting the UI to a back-end database through the API. Still, all the processing is handled client-side. It might work for a proof-of-concept, but some operations should be moved from the UI into the back-end. For example, fee calculations, and updating the mileage and durability, should be handled server-side.
+
+Instead of doing anything else, I'll just provide a list of improvements that I'd like to make, given time. Some of them really wouldn't take that long, but I have to draw the line somewhere.
+
+Existing Design:
+
+- move fee, mileage, and durability logic to the API side
+- provide API to get the "current" booking, instead of getting the entire list of all bookings
+- provide feedback from book and return dialogs. The Book/Return button is greyed out if the booking/return is invalid, but it does not provide any indication of why it is greyed out. So for example, if you have not filled in mileage where it applies, or if you have filled in mileage and it does not apply, the button is greyed but the mileage textbox is not highlighted.
+- CSS everywhere to make it look pretty and make the dialog actually pop over like a dialog box. Dialog boxes on the web are usually an anti-pattern but since the design calls for them ideally we'd display these boxes as a dialog.
+- The documentation says there should be a column to show "current status", but this does not appear on the wireframe. One could enhance the list view to show the status. (Requirement 2-1)
+- Making a booking does not take a name. The documentation says it should, but the wireframe does not show this. (Requirement 2-2)
+- Durability/need to repair could be better. Durability is updated, but there is no way to specify that repair is necessary. Requirement 2-3 calls for a "thing whether the product is needed to repair". So really a booking should store not just the used mileage, but also whether the person broke the item.
+- Requirement 3 calls for a discount logic. But, there is no fields on the input data to support this. It's supposed to be based on a minimum rental period, but there is no period specified in the products table, nor an amount of discount. If I had more time I could have added it, but ideally I'd clarify this requirement since the most obvious implementation isn't great.
+- Requirement 3 implies that meter type estimation should estimate 10 miles per day. But, the product table does not contain any price per mile. Again, it could be added given time.
+- Show/hide mileage field, or grey it out, when it doesn't apply to the selected item.
+- When booking, check to see if the item is already booked for the given date(s).
+
+
+Improved Design:
+
+I think this design can be improved upon.
+
+- Redundant product selection in "Book" - rather than having a separate dropdown inside a dialog box, it would be better if the main list view allowed selecting an element.
+- "Bookings" view - should view all existing bookings, and allow filtering to only outstanding bookings where the product has not been returned yet.
+- "Return" button should be on "Bookings" view, not "Product" view.
+- "Return" button should select a booking, not a product.
+- Actually handing out the item should be tracked. Currently, we assume that the item is handed out when the booking is made - but this doesn't really make sense because the booking could be for the future.
+- "Edit" view for products at least - allow admin to modify mileage, durability, name, etc.
+- Allow multiple outstanding bookings for the same item. (for different dates)
