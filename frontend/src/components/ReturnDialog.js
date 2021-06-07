@@ -71,7 +71,7 @@ class ReturnDialog extends Component {
 	} else {
 		throw 'Unrecognized product type!'
 	}
-	product.durability -= ;
+
 	
 	this.props.onConfirm(event);
   }
