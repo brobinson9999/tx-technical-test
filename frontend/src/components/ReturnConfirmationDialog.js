@@ -16,8 +16,8 @@ class ReturnConfirmationDialog extends Component {
 		<br />
 		Do you want to proceed?
 	  
-		<input type="button" value="Cancel" />
-		<input type="button" value="Confirm" />
+		<input type="button" value="Cancel" onClick={this.props.onCancel} />
+		<input type="button" value="Confirm" onClick={this.props.onConfirm} />
 	  </div>
     );
   }

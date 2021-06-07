@@ -7,21 +7,14 @@ class ProductSelector extends Component {
 	this.state = {
 		sort_by: "name"
 	};
-
-	this.handleChange = this.handleChange.bind(this);	
   }
-
-  handleChange(event)
-  {
-    this.props.onChange(event.target.value);
-  }
-
 
   render() {
     return (
-      <select value={this.props.value} onchange={this.handleChange}>
+      <select name={this.props.name} value={this.props.value} onChange={this.props.onChange}>
+	    <option key="-1" value="-1">[no product selected]</option>
 	    {this.props.options.map((option) => (
-		  <option value="{option.id}">{option.name}</option>
+		  <option key={option.id} value={option.id}>{option.name}</option>
 		))}
       </select>
     );
