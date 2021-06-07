@@ -72,8 +72,24 @@ class ReturnDialog extends Component {
 		throw 'Unrecognized product type!'
 	}
 
-	
-	this.props.onConfirm(event);
+	// Could be more efficient if it only PATCHed the part that changed, instead of the whole model object, but this is arguably simpler code.
+	fetch('/api/booking/' + string(booking.id), {
+	  method: 'PATCH',
+	  headers: {
+		'Content-Type': 'application/json',
+	  },
+	  body: JSON.stringify(booking),
+	}).then(() => {
+		fetch('/api/product/' + string(product.id), {
+		  method: 'PATCH',
+		  headers: {
+			'Content-Type': 'application/json',
+		  },
+		  body: JSON.stringify(product),
+		})
+	}).then(() => {
+		this.props.onConfirm(event);
+	});
   }
 
   handleInputChange(event) {

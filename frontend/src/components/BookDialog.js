@@ -33,7 +33,22 @@ class BookDialog extends Component {
   confirmConfirmationDialog(event)
   {
     this.setState({confirmationDialogVisible: false});
-	this.props.onConfirm(event);
+
+	const booking = {
+		product_id: self.state.productId,
+		start_date: self.state.start_date,
+		end_date: self.state.end_date
+	};
+	
+	fetch('/api/booking/', {
+	  method: 'POST',
+	  headers: {
+		'Content-Type': 'application/json',
+	  },
+	  body: JSON.stringify(booking),
+	}).then(() => {
+		this.props.onConfirm(event);
+	});
   }
 
   handleInputChange(event) {
