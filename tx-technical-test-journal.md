@@ -167,6 +167,7 @@ Existing Design:
 - Requirement 3 implies that meter type estimation should estimate 10 miles per day. But, the product table does not contain any price per mile. Again, it could be added given time.
 - Show/hide mileage field, or grey it out, when it doesn't apply to the selected item.
 - When booking, check to see if the item is already booked for the given date(s).
+- There is some repetition of code, and also the code is not well factored.
 
 
 Improved Design:
