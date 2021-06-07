@@ -23,6 +23,7 @@ class BookButton extends Component {
   confirmDialog(event)
   {
     this.setState({dialogVisible: false});
+	this.props.onChange(event);
   }
 
   handleChange(event)

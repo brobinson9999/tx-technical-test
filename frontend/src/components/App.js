@@ -6,13 +6,16 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      data: [],
+	  bookings: [],
+      products: [],
       loaded: false,
       placeholder: "Loading"
     };
+	
+	this.reloadProductsAndBookings = this.reloadProductsAndBookings.bind(this);	
   }
 
-  componentDidMount() {
+  reloadProductsAndBookings() {
     fetch("api/product")
       .then(response => {
         if (response.status > 400) {
@@ -25,16 +28,39 @@ class App extends Component {
       .then(data => {
         this.setState(() => {
           return {
-            data,
+            products: data,
+            loaded: true
+          };
+        });
+      });
+
+	// Loading this concurrently - you could also have it chain from the product loader.
+    fetch("api/booking")
+      .then(response => {
+        if (response.status > 400) {
+          return this.setState(() => {
+            return { placeholder: "Something went wrong!" };
+          });
+        }
+        return response.json();
+      })
+      .then(data => {
+        this.setState(() => {
+          return {
+            bookings: data,
             loaded: true
           };
         });
       });
   }
 
+  componentDidMount() {
+	  this.reloadProductsAndBookings();
+  }
+
   render() {
     return (
-	  <ProductIndex products={this.state.data} />      
+	  <ProductIndex products={this.state.products} bookings={this.state.bookings} onChange={this.reloadProductsAndBookings}/>      
     );
   }
 }

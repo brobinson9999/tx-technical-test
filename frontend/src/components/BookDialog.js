@@ -35,9 +35,9 @@ class BookDialog extends Component {
     this.setState({confirmationDialogVisible: false});
 
 	const booking = {
-		product_id: self.state.productId,
-		start_date: self.state.start_date,
-		end_date: self.state.end_date
+		product_id: this.state.productId,
+		start_date: this.state.start_date,
+		end_date: this.state.end_date
 	};
 	
 	fetch('/api/booking/', {

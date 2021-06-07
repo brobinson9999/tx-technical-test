@@ -23,6 +23,7 @@ class ReturnButton extends Component {
   confirmDialog(event)
   {
     this.setState({dialogVisible: false});
+	this.props.onChange(event);
   }
 
   handleChange(event)
@@ -35,7 +36,7 @@ class ReturnButton extends Component {
 	  <div>
         <input type="button" onClick={this.handleChange} value="Return" />
 
-        <ReturnDialog visible={this.state.dialogVisible} products={this.props.products} onCancel={this.cancelDialog} onConfirm={this.confirmDialog} />
+        <ReturnDialog visible={this.state.dialogVisible} products={this.props.products} bookings={this.props.bookings} onCancel={this.cancelDialog} onConfirm={this.confirmDialog} />
 	  </div>
     );
   }

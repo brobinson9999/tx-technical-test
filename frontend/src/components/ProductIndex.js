@@ -31,8 +31,8 @@ class ProductIndex extends Component {
 
 		<SortableListView items={products} />
 
-		<BookButton products={products} />
-		<ReturnButton products={products} />
+		<BookButton products={products} onChange={this.props.onChange} />
+		<ReturnButton products={products} bookings={this.props.bookings} onChange={this.props.onChange} />
 	  </div>
     );
   }
